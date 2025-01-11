@@ -249,7 +249,8 @@ footer p {
     width: 100%;
     border-radius: 7px;
     overflow: hidden;
-    margin-left: -50px;
+    margin-left: -150px;
+    margin-right: 150px;
 }
 
 .button {
