@@ -191,6 +191,7 @@ header {
     padding: 20px;
     text-align: center;
     color: white;
+    margin-right: 150px;
 }
 
 .title {
@@ -250,7 +251,6 @@ footer p {
     border-radius: 7px;
     overflow: hidden;
     margin-left: -150px;
-    margin-right: 150px;
 }
 
 .button {
