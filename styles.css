@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('assets/fonts/HomeVideo-Regular.otf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f7f9;
+    padding-top: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, #4e86d1 0%, #2a579d 100%); 
+    height: 80px;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #2a579d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-buttons a:hover {
+    background-color: #4e86d1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideInFromTop {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+.nav-buttons a {
+    animation: slideInFromTop 0.7s ease-in-out;
+}
+
+/* --- Главный Геройский Блок --- */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh; /* Увеличенная высота */
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #4e86d1 0%, #2a579d 100%); /* Более современный градиент */
+    color: #ffffff;
+    overflow-x: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Изящный срез внизу */
+    margin-bottom: -50px;
+    min-height: 72vh; 
+    padding: 40px 20px;
+    margin-top: 80px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Выравнивание по левому краю для современного вида */
+    color: white;
+    margin-right: 50px;
+}
+
+.title h1 {
+    font-size: 56px; /* Больше */
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title h2 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.static-text {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; /* Убираем 'pixel' здесь */
+}
+
+.animated-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; /* Убираем 'pixel' здесь */
+    animation: rainbow 12s infinite ease;
+}
+
+@keyframes rainbow {
+    0% { color: #ff6666; }
+    16.67% { color: #ff9966; }
+    33.33% { color: #ffff66; }
+    50% { color: #66ff66; }
+    66.67% { color: #6699ff; }
+    83.33% { color: #ff66ff; }
+    100% { color: #ff6666; }
+}
+
+.joinbutton {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #FF6666; /* Яркая, контрастная кнопка */
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px; /* Более округлая */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 102, 0.4);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.joinbutton:hover {
+    background: #ff8080;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 102, 102, 0.6);
+}
+
+.avatar {
+    flex-shrink: 0;
+    max-width: 300px; /* Увеличенный размер аватара */
+    text-align: center;
+}
+
+.pixelavatar {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4); /* Более сильная тень */
+    transition: 0.6s ease;
+    scale: 100%; /* Базовый масштаб */
+}
+
+.pixelavatar:hover {
+    scale: 105%;
+    rotate: 1deg;
+}
+
+/* --- Блок с Фичами --- */
+.feat {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f7f9;
+}
+
+.features_title {
+    font-size: 36px;
+    color: #2a579d;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Легкая, современная тень */
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature:nth-child(odd) {
+    flex-direction: row;
+    animation: slideRightLeft 1.3s ease-out;
+}
+
+.feature:nth-child(even) {
+    flex-direction: row-reverse;
+    animation: slideLeftRight 1.3s ease-out;
+}
+
+.feature-content {
+    padding: 20px;
+    text-align: left;
+    flex: 1;
+    color: #333;
+}
+
+.feature-content h3 {
+    font-size: 24px;
+    color: #4e86d1;
+    margin-bottom: 10px;
+}
+
+.feature-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.feature img {
+    max-width: 150px; /* Увеличенные изображения */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 40px;
+    flex-shrink: 0;
+}
+
+@keyframes slideLeftRight {
+    0% { transform: translateX(-20%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRightLeft {
+    0% { transform: translateX(20%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* --- Футер --- */
+footer {
+    background-color: #2a579d; /* Темнее для контраста */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer span {
+    line-height: 1.8;
+}
+
+footer a {
+    color: #FF6666; /* Яркий акцент */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff8080;
+    text-decoration: underline;
+}
+
+/* --- Стили для ToS/Privacy (из tos.css) --- */
+.body2 {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px; /* Более округлые углы */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.body2 h1, .body2 h2 {
+    color: #2a579d; /* Цвет брендинга */
+    font-weight: 700;
+}
+
+.body2 h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #f0f4ff;
+    padding-bottom: 10px;
+}
+
+.body2 h2 {
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.body2 ul, .body2 ol {
+    margin-left: 30px;
+    padding-left: 0;
+}
+
+.body2 li {
+    margin-bottom: 12px;
+}
+
+.body2 p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.body2 a {
+    color: #FF6666;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.body2 a:hover {
+    text-decoration: underline;
+}
