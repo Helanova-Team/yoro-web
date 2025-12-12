@@ -3,60 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoro Bot</title>
-    <link rel="icon" href="assets/icons/Yoro.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Panzu Bot</title>
+    <link rel="icon" href="assets/images/panzu-bot.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
-    <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
     <header>
         <div class="nav-buttons">
-            <a href="policy/tos.html" target="_parent">Terms of Service</a>
-            <a href="policy/privacy.html" target="_parent">Privacy Policy</a>
+            <a href="/terms" target="_parent" data-page="tos">Terms of Service</a>
+            <a href="/privacy" target="_parent" data-page="privacy">Privacy Policy</a>
         </div>
     </header>
     <div class="container">
         <div class="content">
             <div class="text">
                 <div class="title">
-                    <h1><span class="static-text" style="font-family: 'pixel'; text-shadow: 0px 0px 3px rgba(0,0,0,1);">Meet</span>, <span class="animated-text" style="font-family: 'pixel';">Yoro</span>!</h1>
-                    <h2 style="text-shadow: 0px 0px 3px rgba(0,0,0,0.4); font-size: 18px; margin-top: -15px; margin-right: 30px;">Want to turn your server into a party? Then you should meet our pro!</h2>
-                    <a href="https://discord.com/oauth2/authorize?client_id=1249961862859067453" class="joinbutton">Add to Server</a>
-                </div>   
+                    <h1>
+                        <span class="static-text">Meet</span>, 
+                        <span class="animated-text">Panzu</span>!
+                    </h1>
+                    <h2>Want to turn your server into a party? Then you should meet our pro! The ultimate Discord experience is waiting.</h2>
+                    <a href="#" class="joinbutton">Add Panzu to Server</a>
+                </div>   
             </div>
             <div class="avatar">
-                <img src="assets/images/Йоро.png" alt="Yoro Avatar" class="pixelavatar">
+                <img src="assets/images/panzu-bot.jpg" alt="Panzu Avatar" class="pixelavatar">
             </div>
         </div>
     </div>
+    
     <div id="features" class="feat">
-            <div class="feature">
-                <div class="feature-content">
-                    <h3>Helps Manage Your Server</h3>
-                    <p>With Yoro, you can easily set up and automate many aspects of managing your server. Powerful commands and an intuitive interface will help you control everything that happens on the server. 🤖</p>
-                </div>
-                <img src="assets/images/робот.jpg" alt="Server Management">
-            </div>
-            <div class="feature">
-                <div class="feature-content">
-                    <h3>Entertains Even the Most Depressed</h3>
-                    <p>Yoro is designed to bring joy and fun to your server. Its wide range of entertainment features, games, and interactive capabilities will make your community more vibrant and engaging. 🎉</p>
-                </div>
-                <img src="assets/images/хлопушка.png" alt="Entertainment">
-            </div>
-            <div class="feature">
-                <div class="feature-content">
-                    <h3>Configures Everything You Need</h3>
-                    <p>Yoro offers flexible settings that allow you to customize the bot to your needs. Whether it’s role management, auto-moderation, or welcome message customization, Yoro is always ready to adapt to your requirements. ⚙️</p>
-                </div>
-                <img src="assets/images/шестерня.png" alt="Customization">
+        <h2 class="features_title">🔥 Our Key Features</h2>
+        
+        <div class="feature">
+            <img src="assets/images/робот.jpg" alt="Server Management">
+            <div class="feature-content">
+                <h3>Helps Manage Your Server</h3>
+                <p>With Panzu, you can easily set up and automate many aspects of managing your server. Powerful commands and an intuitive interface will help you control everything that happens on the server. 🤖</p>
             </div>
         </div>
-    <footer style="background-color: rgb(157, 191, 255); margin-top: -50px; height: 100px; align-content: center; font-family:Verdana, Geneva, Tahoma, sans-serif">
+        
+        <div class="feature">
+            <img src="assets/images/хлопушка.png" alt="Entertainment">
+            <div class="feature-content">
+                <h3>Entertains Even the Most Depressed</h3>
+                <p>Panzu is designed to bring joy and fun to your server. Its wide range of entertainment features, games, and interactive capabilities will make your community more vibrant and engaging. 🎉</p>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <img src="assets/images/шестерня.png" alt="Customization">
+            <div class="feature-content">
+                <h3>Configures Everything You Need</h3>
+                <p>Panzu offers flexible settings that allow you to customize the bot to your needs. Whether it’s role management, auto-moderation, or welcome message customization, Panzu is always ready to adapt to your requirements. ⚙️</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
         <span>
-             Found a bug? <a href="https://discord.gg/k2e6PCetBd">Contact us on Discord.</a>
-        <br><br>Have questions or concerns? Contact us: <a href="mailto:helanovateam@gmail.com">helanovateam@gmail.com</a>
-        <br><br>© 2025 Helanova Team. All rights reserved.</span>
+            Found a bug? <a href="https://discord.gg/k2e6PCetBd">Contact us on Discord.</a>
+        <br>Have questions or concerns? Contact us: <a href="mailto:helanovateam@gmail.com">helanovateam@gmail.com</a>
+        <br>© 2025 Helanova Team. All rights reserved.</span>
     </footer>
+    
+    <script>
+        (function () {
+            var features = document.querySelectorAll('.feature');
+            
+            var observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            features.forEach(feature => {
+                observer.observe(feature);
+            });
+        })();
+    </script>
 </body>
 </html>
